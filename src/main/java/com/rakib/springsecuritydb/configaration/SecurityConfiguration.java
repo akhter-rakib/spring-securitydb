@@ -22,6 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    /*dataSource is used into the application.properties*/
     @Qualifier("dataSource")
     @Autowired
     private DataSource dataSource;

@@ -1,19 +1,15 @@
 package com.rakib.springsecuritydb.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "role")
 public class Role {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String role;
-
     private int activeStatus;
 
     public Role() {
@@ -23,7 +19,6 @@ public class Role {
         this.role = role;
         this.activeStatus = activeStatus;
     }
-
 
     public int getId() {
         return id;
